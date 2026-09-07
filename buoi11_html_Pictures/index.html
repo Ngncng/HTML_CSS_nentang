@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Pictures</title>
+</head>
+<body>
+  <!-- Picture Element: Cho phép chúng ta hiển thị các hình ảnh khác nhau 
+   tùy theo những kích thước màn hình khác nhau. -->
+
+   <picture>
+    <source media="(min-width: 770px)" srcset="img/2.jpg" height="500">
+    <source media="(max-width: 480px)" srcset="img/1.jpg" height="300">
+    <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/mqdefault.jpg" alt="default picture">
+   </picture>
+</body>
+</html>
