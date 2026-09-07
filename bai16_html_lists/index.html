@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Lists</title>
+</head>
+<body>
+  <h3 style="font-size: 25px; color: tomato;">UL: danh sách không sắp xếp</h3>
+  <ul>
+    <li>coffee</li>
+    <li>tea</li>
+    <li>water</li>
+  </ul>
+  <br>
+  <h3 style="font-size: 25px; color: tomato;">OL: danh sách thứ tự có sắp xếp</h3>
+  <ol>
+    <li>coffee</li>
+    <li>tea</li>
+    <li>water</li>
+  </ol>
+  <br>
+  <h3 style="font-size: 25px; color: tomato;">DL: danh sách dạng mô tả</h3>
+  <dl>
+    <dt>coffee</dt>
+    <dd>- Pure black</dd>
+    <dd>- Bac xiu</dd>
+  
+    <dt>tea</dt>
+    <dd>- Atiso</dd>
+  </dl>
+  <hr>
+  <h3>Những danh sách lồng nhau - Nested Lists</h3>
+  <h4>Nested Lists > Danh sách không sắp xếp: </h4>
+  <ul>
+    <li>coffee
+      <!-- -->
+      <ul>
+        <li>Black</li>
+        <li>Bac xiu</li>
+      </ul>
+      <!--  -->
+    </li>
+    <!--  -->
+    <li>Tea
+      <ul>
+        <li>Atiso</li>
+        <li>Hong tra</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <hr>
+  <h4>Nested Lists > Danh sách có sắp xếp: </h4>
+  <ol>
+    <li>Sở thích
+      <ol>
+        <li>Nghe sách nói</li>
+        <li>Ngủ</li>
+      </ol>
+    </li>
+    <li>Thói quen
+      <ol>
+        <li>Ngủ</li>
+      </ol>
+    </li>
+  </ol>
+  <hr>
+
+  <h3>Tạo kiểu cho danh sách:</h3>
+  <h3>Styled List: Danh sách không sắp sếp</h3>
+  <ul style="list-style-type: square;">
+    <li>coffee</li>
+    <li>tea</li>
+    <li>water</li>
+  </ul>
+
+  <hr>
+  <h3>Styled List: Danh sách không sắp sếp</h3>
+    <!-- <ol type="I"> -->
+  <ol type="1" start="4" reversed>
+    <li>coffee</li>
+    <li>tea</li>
+    <li>water</li>
+  </ol>
+</body>
+</html>
