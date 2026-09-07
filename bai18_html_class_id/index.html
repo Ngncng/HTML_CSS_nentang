@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Class and Id</title>
+  <link rel="stylesheet" href="./style.css">
+  <!-- script không phụ thuộc vào DOM thì có thể đưa lên phần head như vầy, do script được dưa lên head nên được chạy trước 
+   và các phần bên dưới sẽ chạy sau nên script sẽ không lấy được phần ở bên dưới 
+   cách giải quyết là có thể đưa script xuống phần body hoặc thêm thuộc tính defer hoặc async-->
+  <!-- <script src="./main.js"></script> -->
+
+  <!-- defer: Script được tải song song với HTML, nhưng sẽ được thực thi khi toàn bộ html được tải và phân tích. Phù hợp cho script cần giữ thứ tự và phụ thuộc DOM -->
+  <!-- <script src="./main.js" defer></script> -->
+
+  <!-- async: được tải song song với HTML, có thể làm gián đoạn quá trình tải html. phù hợp cho script độc lập, không phụ thuộc thứ tự -->
+  <!-- <script src="./main.js" async></script> -->
+
+</head>
+<body>
+  <div id="id-1" class="class-1" style="color: blue;">
+    Content 1
+  </div>
+
+  <div class="group-class">Content 2</div>
+  <div class="group-class">Content 3</div>
+  <div class="group-class">Content 4</div>
+  <div class="group-class">Content 5</div>
+
+  <!-- hoặc có thể để script ở dưới phần body để trình duyệt có thể render xong trước nhũng nội dung ở trên -->
+   <script src="./main.js"></script>
+</body>
+</html>
