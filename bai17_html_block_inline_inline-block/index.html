@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Block, Inline & Inline-Block</title>
+</head>
+<body>
+  <h3>HTML Block:</h3>
+  <!-- Block có thể hiểu theo nghĩa tiếng Việt là một khối.
+  Trong HTML, Block là một kiểu hiển thị cho các Elements.
+  Một Block sẽ bắt đầu trên một dòng mới, và mặc định chiếm 100% chiều rộng màn hình có sẵn.
+  Block có thể thay đổi width - height thoải mái.
+  Có 2 thẻ HTML phổ biến dạng Block thường được sử dụng là <div> và <p>
+  Ngoài ra còn nhiều thẻ khác như:
+  <address> <article> <blockquote> <canvas> <dd> <dl> <dt> <footer> <form> <h1>-<h6> <header> <hr> <li> <main> <nav> <ol> <pre> <section> <table> <tfoot> <ul> <video>
+  -->
+    <div style="width: 250px;">Đây là nội dung đơn giản để vd về hiển thị trên 1 dòng của thẻ block</div>
+    <p>Đây là nội dung đơn giản để vd về hiển thị trên 1 dòng của thẻ p</p>
+  <hr>
+
+  <h3>HTML Inline:</h3>
+  <!-- 
+   Inline - nội tuyến: có thể hiểu đơn giản là ở trên cùng một hàng.
+  Inline là một kiểu hiển thị cho các Elements.
+  Inline không tạo dòng mới mà sẽ nối tiếp trên cùng dòng.
+  Inline sẽ chiếm width - height đủ dùng (theo nội dung mà nó chứa bên trong) và không thể thay đổi.
+  Thẻ HTML phổ biến nhật dạng Inline thường được sử dụng là <span>, <a>
+  Ngoài ra còn nhiều thẻ khác như:
+  <a> <abbr> <b> <bdo> <br> <button> <cite> <code> <em> <i> <img> <input>  <label> <map> <object> <output> <q> <script> <select> <small> <strong> <sub> <sup> <textarea>
+  Lưu ý: Code đúng chuẩn thì một phần tử dạng Inline không được phép chứa phần tử con dạng Block nhé.
+  -->
+  <span style="width: 250px;">Đây là nội dung đơn giản để vd về hiển thị của thẻ span "inline"</span>
+  <strong>thẻ inline các content sẽ cùng nằm trên 1 hàng không bị bắt đầu trên 1 dòng mới và sẽ không thể set lại width-height mà kích thước sẽ phụ thuộc vào nội dung mà nó chứa bên trong</strong>
+  <hr>
+
+  <h3>HTML Inline-Block:</h3>
+  <!-- 
+  Inline-block: Là một kiểu hiển thị kết hợp giữa block và inline.
+  Phần tử có kiểu inline-block sẽ giữ đặc điểm của inline (hiển thị trên cùng một dòng), nhưng có thể điều chỉnh chiều rộng và chiều cao như một thẻ block. Ví dụ:
+  <span style="display: inline-block; width: 500px;">TrungQuanDev</span>
+
+  Note: Block thường được dùng để tạo thành phần có cấu trúc lớn, còn Inline thường dùng cho các thành phần nhỏ hơn cũng như không làm gián đoạn văn bản trên một dòng.
+  -->
+
+  <span style="display: inline-block; width: 500px;">Inline-Block có thể giúp thẻ inline có thể set được width-heigh</span>
+</body>
+</html>
