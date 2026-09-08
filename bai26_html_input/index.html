@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Input</title>
+</head>
+<body>
+  <!-- 
+  type: kiểu của input: text, password, email, number, date, color, file…vv
+  placeholder: Nội dung giữ chỗ, kiểu để gợi ý user nhìn vào biết nên điền gì.
+  required: bắt buộc phải nhập nội dung.
+  value: nội dung của thẻ input
+  readonly: thẻ input chỉ đọc
+  disabled: thẻ input bị vô hiệu hóa.
+
+  -->
+
+  <form name="register-form">
+   <label for="username">Username:</label>
+   <input type="text" name="fullname" id="username" 
+          placeholder="Enter your username..." 
+          required autocomplete="off" style="width: 200px;"
+          value="hoclaptrinh"
+    >
+   <br><br>
+   <label for="email">Email:</label>
+   <input type="email" name="email" id="email" required autocomplete="off" style="width: 200px;">
+   <br><br>
+   <label for="password">Password:</label>
+   <input type="password" name="password" id="password" required>
+   <br><br>
+   <label for="dob">Date of birth:</label>
+   <input type="date" name="dob" id="dob">
+   <br><br>
+   <label for="color">Your favourite color:</label>
+   <input type="color" name="color" id="color">
+   <br><br>
+   <button type="submit">Register</button>
+ </form>
+</body>
+</html>
