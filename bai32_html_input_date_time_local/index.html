@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Input Date Time Local</title>
+</head>
+<body>
+  <form>
+    <label>choose a booking date:</label>
+    <input type="date"
+           name="booking-date"
+           min="2026-09-01"
+           max="2026-09-09"
+           required
+    ><br><br>
+    <button type="submit">Confirm</button>
+  </form>
+  <br><hr>
+  <form>
+    <label>Choose a booking date:</label><br>
+    <input type="datetime-local"
+           id="meeting-time"
+           name="meeting-time"
+           value="2026-09-09T10:45"
+    ><br><br>
+    <button type="submit">Confirm</button>
+  </form>
+</body>
+</html>
