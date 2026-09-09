@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply CSS</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .internal-p {
+        color: blue;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- inline -->
+    <!-- 
+  Inline: Viết CSS trong các thẻ HTML.
+  Cách này nhanh nhất, độ ưu tiên áp dụng của css cũng cao nhất. Nhưng chỉ nên dùng khi cần test nhanh và demo đơn giản. Lạm dụng sẽ gây khó bảo trì khi scale lớn.
+   -->
+    <p style="color: red">css inline</p>
+
+    <!-- internal -->
+    <!-- 
+  Internal: Viết CSS trong thẻ <style> bên trong thẻ <head>
+  Là một cách làm nhanh CSS ngay trong file html nếu trang web không có gì phức tạp như dự án nhỏ hoặc bài tập đơn giản mà chỉ có 1 file HTML duy nhất.
+  -->
+    <p class="internal-p">css internal</p>
+
+    <!-- external -->
+    <!-- 
+  External: Dùng tách biệt file css riêng và gọi nó ở file html.
+  Cách làm chuẩn nhất, đặc biệt trong teamwork, dễ tái sử dụng, mở rộng và bảo trì.
+   -->
+    <p class="external-class">css external</p>
+    <p id="external-id">css external</p>
+  </body>
+</html>
