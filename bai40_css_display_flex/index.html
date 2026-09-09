@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display-Flex</title>
+
+    <style>
+        .flex-box div{
+            padding: 20px;
+            width: 50px;
+            /* height: 100vh; */
+            background: white;
+            border: 1px solid gray;
+        }
+
+        .flex-box {
+            background: lightblue;
+            display: flex;
+            height: 100vh;
+
+            /* cross axis(truc phu) luon vuong goc voi fex-direction*/
+            flex-direction: row;
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row-reverse; */
+            gap: 20px;
+
+/* =========================================Trục chính========================================== */
+            /* Căn phần tử về đầu trục chính (main axis) */
+            justify-content: flex-start;
+
+            /* Căn phần tử ở giữa trục chính */
+            justify-content: center;
+
+            /* Căn phần tử về cuối trục chính */
+            justify-content: flex-end;
+
+            /* Phân bổ đều, nhưng phần tử ngoài cùng có khoảng cách bằng 1/2 các khoảng ở giữa */
+            justify-content: space-around;
+
+            /* Phân bổ đều, mọi khoảng cách đều nhau */
+            justify-content: space-evenly;
+
+            /* Phân bổ đều, phần tử đầu và cuối sẽ dính sát viền */
+            justify-content: space-between;
+
+/* =========================================Trục phụ========================================== */
+            /* align-items: căn chỉnh các phần tử con trên trục phụ (cross axis) */
+            align-items: flex-start;
+            /* align-items: center; */
+            /* align-items: flex-end; */
+
+            /* Căn theo chân chữ trong nội dung text */
+            /* align-items: baseline; */
+        
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flex-box">
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <!-- <div>Box 3</div>
+        <div>Box 4</div>
+        <div>Box 5</div>
+        <div>Box 6</div>
+        <div>Box 7</div> -->
+        <p>Align Items</p>
+    </div>
+
+    <p style="font-family: cursive; color: tomato; background-color: lightcyan;">
+        justify-content: LUÔN LUÔN đi theo Main Axis (Trục chính).
+        align-items: LUÔN LUÔN đi theo Cross Axis (Trục phụ) (vuông góc với trục chính).
+    </p>
+</body>
+</html>
