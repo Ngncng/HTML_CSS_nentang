@@ -1,0 +1,11 @@
+.external-class {
+  font-family: cursive;
+  color: crimson;
+  background-color: beige;
+}
+
+#external-id {
+  font-weight: bold;
+  font-size: 19px;
+  color: blueviolet;
+}
