@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Box Model</title>
+  <style>
+   .box {
+     width: 200px;
+     height: 100px;
+     background: lightgray;
+     box-sizing: border-box;
+     /* box-sizing: content-box; */
+   }
+    .p-30 { padding: 30px; }
+   .border-10-solid-green {
+     border: 10px solid green;
+   }
+   .m-20 { margin: 20px; }
+ </style>
+
+</head>
+
+<body>
+  <!-- padding: la khoang cach ben trong , margin: la khoang cach ben ngoai, border: la duong vien-->
+  <!-- 1 thuộc tính khai báo css Quan trọng: box-sizing
+  box-sizing có 2 giá trị cần quan tâm: content-box, và border-box
+  - content-box: giá trị default, lúc này width và height củaphần tử thì sẽ chỉ áp dụng cho phần content. 
+  Còn kích thước của border và padding sẽ được cộng thêm bên ngoài (Cách này khó kiểm soát layout)  
+  -->
+  
+  <p style="color: brown;">padding: la khoang cach ben trong , margin: la khoang cach ben ngoai, border: la duong vien</p>
+  
+  <img src="./img/box-model.png" alt="mô tả cho box-model" height="200">
+  
+  <p>
+    <strong>box-sizing có 2 giá trị cần quan tâm: content-box, và border-box</strong> <br>
+    - <b>content-box: giá trị default</b>, lúc này width và height của phần tử thì sẽ chỉ áp dụng cho phần content.
+    Còn kích thước của border và padding sẽ được cộng thêm bên ngoài <b>(Cách này khó kiểm soát layout)</b>
+  </p>
+  <hr>
+  <p>
+    <b>border-box</b>: Ngược lại, lúc này <i>width và height của phần tử
+      sẽ bao gồm cả kích thước của content + border + padding</i>
+      <b>(Nên dùng, dễ kiểm soát layout hơn)</b>
+    </p>
+  <hr>
+  <div class="box p-30">Padding</div>
+  <div class="box border-10-solid-green">Border</div>
+  <div class="box m-20">Margin</div>
+
+</body>
+
+</html>
