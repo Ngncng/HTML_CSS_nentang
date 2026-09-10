@@ -1,0 +1,14 @@
+/* index.css */
+/* Nạp file Css Variables vào đầu tiên để làm nền tảng */
+@import url("./variables.css");
+
+/* Sau đó mới nạp các file giao diện thành phần */
+@import url("./header.css");
+@import url("./main.css");
+@import url("./footer.css");
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  background-color: var(--bg-common);
+}

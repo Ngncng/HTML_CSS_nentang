@@ -1,0 +1,25 @@
+/* Khai báo tập trung bằng cú pháp :root */
+/* LIGHT THEME */
+:root {
+  /* Biến màu sắc */
+  --primary-color: #2c3e50; /* Màu chủ đạo - Xanh đậm Pro */
+  --accent-color: #e74c3c; /* Màu điểm nhấn - Đỏ highlight */
+  --success-color: #2ecc71; /* Màu success- Xanh lá cây */
+  --text-color: #333333; /* Màu chữ chính */
+  --bg-common: #f8f9fa; /* Màu nền xám nhạt */
+
+  /* Biến Typography (Cỡ chữ) */
+  --font-main: "Arial", sans-serif;
+  --fs-title: 32px;
+  --fs-body: 16px;
+}
+
+/* Xử lý riêng phần DARK THEME */
+body.dark-theme {
+  --bg-common: #121212; /* Nền xám nhạt đổi thành Đen/Xám siêu tối */
+  --text-color: #ffffff; /* Chữ đen đổi thành trắng tinh để nổi bật */
+  /* Các màu sắc thương hiệu/trạng thái nên chọn mã màu sáng và dịu hơn */
+  --primary-color: #3498db; /* Đổi sang màu Xanh neon sáng, dễ nhìn trên nền đen */
+  --accent-color: #ff7675; /* Đỏ nhạt/hồng coral hơn để đỡ chói mắt */
+  --success-color: #55efc4; /* Xanh lá sáng nhẹ nhàng hơn */
+}
