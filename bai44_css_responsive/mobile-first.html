@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile-First</title>
+    <style>
+      /* 1. CSS ban đầu cho MOBILE (Màn hình nhỏ) */
+      .container-mobile {
+        display: flex;
+        gap: 20px;
+        flex-direction: column; /* Xếp dọc trên mobile */
+      }
+      .card-item {
+        background-color: #e74c3c; /* Màu đỏ */
+        padding: 20px;
+        text-align: center;
+      }
+      /* ----------------------------------------------- */
+      /* 2. Viết CSS trên Desktop (Từ 768px trở lên) */
+      @media (min-width: 768px) {
+        .container-mobile {
+          flex-direction: row; /* Trình duyệt mở rộng thì dàn hàng ngang */
+        }
+        .card-item {
+          flex: 1;
+          background-color: #2ecc71; /* Màu xanh lá */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-mobile">
+      <div class="card-item">Card 1</div>
+      <div class="card-item">Card 2</div>
+      <div class="card-item">Card 3</div>
+    </div>
+  </body>
+</html>
