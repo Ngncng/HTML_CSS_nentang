@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <style>
+        .h-20{
+            height: 20px;
+        }
+
+        .static {
+            width: 250px;
+            height: 100px;
+            background: lightblue;
+            /* position: static; (mặc định)*/
+            /* position: static; */
+            top: 20px;
+            left: 20px;
+        }
+
+        .relative {
+            width: 250px;
+            height: 100px;
+            position: relative;
+            background: lightgreen;
+            top: 20px;
+            left: 20px;
+        }
+
+        .absolute{
+            width: 150px;
+            height: 50px;
+            background: lightcoral;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            /* right: 20px;
+            bottom: 20px; */
+
+        }
+
+        .fixed{
+            width: 150px;
+            height: 50px;
+            background: blueviolet;
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+
+        .sticky{
+            width: 250px;
+            height: 80px;
+            background: lightsalmon;
+            position: sticky;
+            /* cuộn đến 0 thì dừng lại */
+            top: 0;
+        }
+
+        .h-1500{
+            height: 1500px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        Position: Là cách để làm cho các phần tử di chuyển tự do trong trang.
+        - Position - Static: Đây là kiểu mặc định, phần tử giữ nguyên vị trí ban đầu và sẽ không sử dụng được các thuộc tính top-left-bottom-right
+    
+        - Position - Relative: Phần tử vẫn giữ nguyên vị trí ban đầu nhưng có thể sử dụng được các thuộc tính top-left-bottom-right
+
+        - Position - Absolute: Phần tử không còn giữ nguyên vị trí ban đầu nữa. Thay vào đó vị trí sẽ được tính toán tương đối thì sẽ dựa vào 
+        phần tử cha gần nhất có position khác static. Có thể sử dụng được các thuộc tính top-left-bottom-right. 
+        (Nếu không có phần tử cha phù hợp, sẽ được tính với body)
+
+        - Position - Fixed: Phần tử sẽ thoát hẳn khỏi flow của trang web, lúc này vị trí sẽ cố định so với màn hình của trình duyệt. 
+        Và không bị cuộn theo nội dung khi cuộn trang.
+
+        - Position - Sticky: Ban đầu là relative, Khi cuộn trang đến một ngưỡng là sẽ “dính” lại, như fixed. Rất thích hợp làm Menu dạng Sticky.
+    
+    -->
+    <div class="static">
+        Static Content
+    </div>
+    <!--  -->
+    <div class="relative">
+        Relative Content 1
+    </div>
+    <div class="h-20">&nbsp;</div>
+    
+    <div class="relative">
+        Relative Content 2
+        <div class="absolute">
+            Absolute Content 01 (follow relative)
+        </div>
+    </div>
+    <div class="h-20">&nbsp;</div>
+    
+    <div class="absolute">
+        Absolute Content 02 (follow body)
+    </div>
+    <div class="h-20">&nbsp;</div>
+
+    <div class="fixed">
+        Fixed Content (follow viewport)
+    </div>
+    <div class="sticky">
+        Sticky Content
+    </div>
+    <div class="h-1500">&nbsp;</div>
+</body>
+</html>
