@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .grid-box div{
+            background: pink;
+            padding: 20px;
+        }
+        /* -------------------- */
+        .grid-box {
+            display: grid;
+            gap: 10px;
+
+
+            /* Xác định số cột và kích thước từng cột trong một grid layout */
+            /* (fr: fraction): sẽ tự tính toán tỉ lệ của không gian còn lại trong grid layout */
+            
+            /* Kích thước cố định */
+            grid-template-columns: 100px 200px 100px;
+
+            /* fr */
+            grid-template-columns: 1fr 2fr 1fr;
+            
+            /* kết hợp kích thước cố định với fr */
+            grid-template-columns: 100px 1fr 1fr;
+
+
+            /* Kích thước giống nhau */
+            grid-template-columns: 1fr 1fr 1fr;
+            /* giống như vd kích thước giống nhau ở trên: lặp lại 3 lần 1fr */
+            grid-template-columns: repeat(3, 1fr);
+
+
+            /* Cột tự co dãn theo nội dung */
+            grid-template-columns: auto auto auto;
+
+
+            /* Giới hạn mỗi cột tối thiểu 250px, tối đa tự co giãn linh hoạt. */
+            grid-template-columns: repeat(3, minmax(250px, 1fr));
+            
+            
+            /* Tự động tạo cột vừa đủ bằng auto-fit hoặc auto-fill kết hợp minmax (Cách này dùng nhiều nhất. Tự động responsive) */
+            /* auto-fit: khi không đủ cột, tự động kéo dãn kích thước cột cho fit chiều rộng (test với 3 cột) */
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            
+            
+            /* auto-fill: khi không đủ cột, khoảng trống vẫn được giữ nguyên, fix layout nếu không muốn thay đổi (test với 3 cột) */
+            /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="grid-box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <!-- <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>Nội dung dài ...</div> -->
+    </div>
+</body>
+</html>
