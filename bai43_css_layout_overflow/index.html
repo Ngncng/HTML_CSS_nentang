@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout-Overflow</title>
+    <style>
+        .box-overflow {
+            width: 200px;
+            height: 100px;
+            background-color: lightsalmon;
+            padding: 10px;
+
+            /* Giá trị mặc định, bị tràn */
+            overflow: visible;
+
+
+            /* Tự động cắt bớt phần bị tràn ra và ẩn đi */
+            overflow: hidden;
+            
+            
+            /* Tự động thêm thanh cuộn khi nội dung bị tràn */
+            overflow: auto;
+            
+            
+            /* Luôn hiển thị thanh cuộn dù nội dung có tràn hay không (ít dùng)*/
+            /* Tuy nhiên tùy vào OS, ví dụ MacOS sẽ ẩn mặc định cho đẹp */
+            /* Appearance > Show scroll bars” */
+            overflow: scroll;
+
+            
+            /* Quản lý ẩn hiện riêng cho thanh cuộn ngang hoặc dọc */
+            overflow-y: scroll;
+            overflow-x: scroll;
+            /* nowrap: không xuống dòng */
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    Overflow: Sử dụng để xử lý trường hợp nội dung của phần tử bị tràn ra khỏi phần hiển thị. Trường hợp bị tràn này gặp rất nhiều trong thực tế.
+    visible(mặc định): tràn nếu nội dung lớn hơn vùng chứa
+    hidden: ẩn nội dung bị tràn đi
+    scroll: tạo thanh cuộn dù nội dung có tràn hay không
+    auto: hiện thanh cuộn khi nội dung bị tràn
+    -->
+    <div class="box-overflow">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo facere molestiae quam beatae dolorum, debitis, 
+        laborum vel atque magnam libero mollitia, nulla error maxime. Nemo similique ipsam a laboriosam provident!
+        Incidunt rem quo deserunt! Consequuntur, harum ea voluptatum, totam, quasi suscipit corporis tempora ad at sunt
+        quos architecto ducimus aut eius error. Molestias nisi esse autem, quaerat voluptates minus placeat.
+        Placeat, quas provident deleniti, nihil alias harum quam laborum vero minus dolorum ad ipsa omnis distinctio minima 
+        sequi rerum odio maiores sed aperiam quo repellendus, est incidunt. Nam, tempora a.
+    </div>
+</body>
+</html>
