@@ -1,0 +1,6 @@
+/* main.css */
+.main-content {
+  font-family: var(--font-main);
+  font-size: var(--fs-body);
+  color: var(--success-color);
+}
