@@ -1,0 +1,12 @@
+/* Điểm cuối để gắn CSS vào HTML */
+
+/* Đầu tiên: Import các biến CSS */
+@import url("./variables.css");
+
+/* Import từ trên xuống dưới */
+@import url("./general.css");
+@import url("./header.css");
+@import url("./main-content.css");
+
+/* Cuối cùng: responsive import cuối cùng. Để class của các màn hình nhỏ sẽ được ưu tiên hơn các file ở trên */
+@import url("./responsive");

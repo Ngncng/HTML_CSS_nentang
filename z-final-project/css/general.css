@@ -1,0 +1,29 @@
+/* file general: define những CSS đặc thù chg cho toàn bộ dự án */
+
+/* *{...} áp dụng các thuộc tính nằm trong dấu ngoặc nhọn này cho mọi phần tử HTML xuất hiện trên trang web
+(body, div p, span, h1...) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Áp dụng cho body */
+body {
+  background-color: var(--bg-color);
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  line-height: 1.4; /* khoảng cách không gian theo chiều dọc giữa các dòng văn bản */
+  font-size: var(--fs-body);
+  padding: 40px 20px;
+}
+
+.resume-container {
+  /* Nên set chiều rộng tối đa cho khung ngoài cùng tránh bị tràn trên màn hình quá to, sau đó căn giữa mọi nội dung */
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+
+  border: 1px solid red;
+  height: 100vh;
+}
