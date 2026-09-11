@@ -56,7 +56,61 @@
   <body>
     <div class="resume-container">
 
-      <header class="header"></header>
+      <header class="header">
+         <!-- bubble-left -->
+        <div class="bubble-left">
+          <div class="hello-text">Hello there,</div>
+          <div class="contact-info">
+            <!-- SĐT -->
+            <p>
+              <i class="fas fa-mobile-alt"></i>
+              <a href="tel:0123456789">
+                0123456789
+              </a>
+            </p>
+
+          <!--
+            rel="noopener noreferrer": với exterrnal link target _blank, thì rel này sẽ 
+            ngăn chặn lỗ hỏng bảo mật liên quan đến tab lừa đảo (window.opener)
+            đồng thời ẩn thông tin nguồn (Referrer) để bảo mật cho trang web của mình
+          -->
+            <p>
+              <i class="fas fa-map-marker-alt"></i>
+              <a href="https://maps.app.goo.gl/i364DGSWY8as1Mba6" target="_blank" rel="noopener noreferrer">
+                Hanoi, Vietnam
+              </a>
+            </p>
+
+            <!-- Github -->
+            <p>
+              <i class="fas fa-globe"></i>
+              <a href="https://github.com/Ngncng/" target="_blank" rel="noopener noreferrer">
+                Github
+              </a>
+            </p>
+
+            <!-- Mail -->
+            <p>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:obito060523@gmail.com" target="_blank" rel="noopener noreferrer">obito060523@gmail.com</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Avatar -->
+         <div class="avatar">
+            <img src="./assets/img/icon-2.jpg" alt="Hoclaptrinh">
+         </div>
+
+         <!-- bubble-right -->
+          <div class="bubble-right">
+            <div class="im-text">i'm Hoclaptrinh</div>
+            <div class="first-job">Developer</div>
+            <div class="second-job">Student</div>
+            <div class="third-job">Upcoming...</div>
+
+          </div>
+      </header>
 
       <main class="main-content">
         <div class="col-left"></div>

@@ -1,0 +1,166 @@
+/* Header Section */
+.header {
+  display: flex;
+  /* căn giữa các phần tử theo trục dọc Y */
+  align-items: center;
+  /* căn giữa các phần tử theo trục ngang X */
+  justify-content: center;
+  /* khoảng cách giữa các phần tử con */
+  gap: 20px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.bubble-left {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  /* padding đều 25px cả 4 hướng lần lượt theo chiều kim đồng hồ: top - right - bottom -left*/
+  padding: 25px;
+  border-radius: 50px;
+  position: relative;
+  box-shadow: var(--shadow-bubble);
+}
+
+/* 
+  ::after: là công cụ giúp CSS tự động chèn thêm 1 phần tử con ảo vào vị trí cuối cùng bên trong phần tử được chọn.
+  Ở đây chúng ta đang làm hình tam giác, kiểu mũi tên (arrow) hướng về bên phải của bubble-left.
+*/
+.bubble-left::after {
+  /* Nội dung để trống */
+  content: "";
+  position: absolute;
+  right: -20px;
+  /* Cách top khoảng 50% , phần tử được căn lề về giữa theo chiều dọc nhưng nội dung phần tử 
+  sẽ ở phía dưới của 50% nên chưa thể về chính giữa được*/
+  top: 50%;
+  /* kết hợp cái dịch chuyển này để đạt được mục tiêu chính giữa: kéo phần tử ngược lên
+  theo trục dọc Y một khoảng bằng đúng một nữa chiều cao của chính nó */
+  transform: translateY(-50%);
+  /* Tạo hình tam giác mũi tên: Đặt độ dày cho 4 cạnh border (trên 15px - phải 0px - dưới 15px - trái 25px*/
+  border-width: 15px 0 15px 25px;
+  /* test kích thước border-with + boder color bên dưới để hiểu cách hoạt động để tạo ra tam giác mũi tên  */
+  /* 
+  border-width: 15px 15px 15px 15px;  
+  */
+  /* Kiểu viền nét liền */
+  border-style: solid;
+  /* Giấu 3 cạnh Trên - Phải - Dưới bằng màu trong suốt giữ lại cạnh Trái màu cam để tạo thành hình
+  tam giác nhọn chỉ sang phải */
+  border-color: transparent transparent transparent var(--color-orange);
+  /*
+   border-color: red blue green yellow; 
+   */
+}
+
+.hello-text {
+  font-family: var(--font-handwriting);
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1;
+  margin-top: 10px;
+}
+
+.contact-info p {
+  margin-bottom: 5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.avatar {
+  width: 180px;
+  height: 250px;
+  background-color: var(--color-white);
+  /* Lần lượt: Top-Left, Top-Right, Bottom-Right, Bottom-Left */
+  border-radius: 90px 90px 90px 20px;
+  /* Thêm bóng đổ bên dưới mô phỏng bục xanh */
+  box-shadow: 0 25px 0 -5px var(--color-teal);
+  /* Để phần tử bên trong không bị tràn khỏi bo góc bên ngoài của nó, 
+  những phần tử tràn ra sẽ bị ẩn đi */
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  /* contain: Trình  duyệt sẽ tự động co giãn tấm ảnh sao cho toàn bộ tấm ảnh nằm 
+  trọn vẹn, và đầy đủ 100% bên trong cung chứa nó */
+  /* object-fit: contain; */
+
+  /* cover: Trình duyệt sẽ tự động co giãn tấm ảnh sao cho chiều rộng và chiều cao 
+  của ảnh phủ kín toàn diện tích của vùng chứa nó */
+  object-fit: cover;
+}
+
+.bubble-right {
+  background-color: var(--color-yellow);
+  padding: 40px 60px;
+  /* relative để làm mũi tên cho phần bên dưới với absolute */
+  position: relative;
+  min-width: 450px;
+  box-shadow: var(--shadow-bubble);
+
+  /* 
+    Kỹ thuật bo góc nâng cao, bất đối xứng: bán kính ngang x / bán kính dọc y
+    X: 50% 50% 50% 10px Định nghĩa độ dài bo theo chiều ngang X của 4 góc (theo 
+    chiều kim đồng hồ).
+    Y: 60% 60% 40% 10px Định nghĩa độ dài bo theo chiều dọc Y của 4 góc ( theo chiều
+    kim đồng hồ).
+    ---
+    Top-Left: Có bán kính ngang 50% và dọc 60%
+    Top-Right: Có bán kính ngang 50% và dọc 60%
+    Bottom-Right: Có bán kính ngang 50% và dọc 40%
+    Bottom-Left: Có bán kính ngang 10% và dọc 10%
+  */
+  border-radius: 50% 50% 50% 10px / 60% 60% 40% 10px;
+}
+
+.bubble-right::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: 40px;
+  border-width: 15px 25px 15px 0;
+  border-style: solid;
+  border-color: transparent var(--color-yellow) transparent transparent;
+}
+
+.im-text {
+  font-family: var(--font-handwriting);
+  font-weight: 700;
+  font-size: 45px;
+  margin-bottom: -15px;
+}
+
+.first-job {
+  font-family: var(--font-heading);
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 0.9;
+  /* letter-spacing: Khoảng cách giữa các ký tự */
+  letter-spacing: -1px;
+  margin-bottom: 5px;
+}
+
+.second-job {
+  font-family: var(--font-heading);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  /* line-height: 1.5; */
+  padding-left: 10px;
+}
+
+.third-job {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 15px;
+  border-top: 2px solid var(--text-dark);
+  border-bottom: 2px solid var(--text-dark);
+  padding: 5px 0;
+  letter-spacing: 2px;
+}
