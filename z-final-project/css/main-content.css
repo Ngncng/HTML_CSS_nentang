@@ -1,0 +1,240 @@
+/* Main Content Section  */
+.main-content {
+  display: flex;
+  gap: 42px;
+}
+
+/* ---------------------- Left Column --------------------- */
+.col-left {
+  width: 400px;
+  /* kiến thức bổ sung: flex-shrink: Nếu muốn ép cột không bao giờ
+  được co nhỏ lại dưới chiều rộng của nó: vd với bài của chúng ta width là 400px */
+  /* flex-shrink: 0; */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  /* test */
+  /* border: 2px solid blue;
+  height: 500px; */
+}
+
+.section-left {
+  position: relative;
+}
+
+.ribbon-left {
+  padding: 10px 20px 10px 40px;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+  margin-left: -20px;
+  margin-bottom: 10px;
+  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+.ribbon-left::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  border-width: 10px 10px 0 0;
+  border-style: solid;
+  /* làm tối màu để tạo hiệu ứng thị giác dạng nếp gấp */
+  filter: brightness(0.7);
+}
+
+.ribbon-left::after {
+  content: "";
+  position: absolute;
+  right: -13px;
+  top: 1px;
+  border-width: 10px 0 20px 15px;
+  border-style: solid;
+}
+
+/* --------------------------------------- Ribbon color ---------------------------*/
+.bg-green {
+  background-color: var(--color-green);
+}
+.bg-green::before {
+  border-color: var(--color-green) transparent transparent transparent;
+}
+
+.bg-green::after {
+  border-color: transparent transparent transparent var(--color-green);
+}
+
+/* ------------ */
+
+.bg-dark-teal {
+  background-color: var(--color-dark-teal);
+}
+.bg-dark-teal::before {
+  border-color: var(--color-dark-teal) transparent transparent transparent;
+}
+.bg-dark-teal::after {
+  border-color: transparent transparent transparent var(--color-dark-teal);
+}
+
+/* ------------ */
+
+.bg-orange {
+  background-color: var(--color-orange);
+}
+.bg-orange::before {
+  border-color: var(--color-orange) transparent transparent transparent;
+}
+.bg-orange::after {
+  border-color: transparent transparent transparent var(--color-orange);
+}
+
+/* ------------ */
+
+.bg-red {
+  background-color: var(--color-red);
+}
+.bg-red::before {
+  border-color: var(--color-red) transparent transparent transparent;
+}
+.bg-red::after {
+  border-color: transparent transparent transparent var(--color-red);
+}
+/* -----------------------------------------------------------------------------*/
+
+/* ---------------------- CSS Paper Box ---------------------------*/
+.paper-box {
+  background: var(--paper-bg);
+  padding: 24px 25px;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-box);
+}
+
+/* Quan trọng, đoạn này để xử lý chữ nằm trên đúng dòng của paper-box */
+.paper-box p,
+.paper-box li {
+  /* line-height phải bằng đúng kích thước chu kỳ của gradient (24px) */
+  line-height: 24px;
+  /* Reset margin về 0 để không bị lệch khi sang đoạn mới */
+  margin: 0;
+  /* Dịch chữ đi xuống 3px để sát đường kẻ bên dưới (dùng transform để ảnh hưởng đến
+  paperbox tổng thể ) */
+  transform: translateY(3px);
+}
+
+.paper-box ul {
+  list-style: none;
+}
+
+.paper-box strong {
+  font-weight: 700;
+}
+
+.username {
+  text-transform: uppercase;
+}
+
+/* --------------------------Education Box---------------------  */
+.education-box {
+  background-color: var(--color-white);
+  padding: 20px;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-box);
+}
+
+.education-title a {
+  font-weight: bold;
+}
+
+.education-icon {
+  color: red;
+  font-size: 14px;
+}
+
+.icon-youtube {
+  color: var(--icon-youtube);
+}
+
+/* ----------------------------- Interests Grid-------------------*/
+.interests-grid {
+  background-color: var(--color-white);
+  padding: 20px;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-box);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  gap: 12px;
+  font-size: 24px;
+}
+
+/* Hiệu ứng phóng to nhẹ khi rê chuột hover vào phần tử */
+.interest-item {
+  transition: var(--transition-scale);
+}
+
+.interest-item:hover {
+  transform: scale(1.2);
+}
+
+/* Màu sắc riêng cho từng sở thích - tùy các bạn tự do custom */
+.interest-item.icon-gamepad {
+  color: var(--icon-gamepad);
+} /* đỏ */
+.interest-item.icon-tv {
+  color: var(--icon-tv);
+} /* cam */
+.interest-item.icon-globe-americas {
+  color: var(--icon-globe);
+} /* teal */
+.interest-item.icon-palette {
+  color: var(--icon-palette);
+} /* hồng */
+.interest-item.icon-music {
+  color: var(--icon-music);
+} /* tím */
+.interest-item.icon-book {
+  color: var(--icon-book);
+} /* xanh lá */
+.interest-item.icon-camera {
+  color: var(--icon-camera);
+} /* chàm */
+.interest-item.icon-dumbbell {
+  color: var(--icon-dumbbell);
+} /* cam đậm */
+.interest-item.icon-coffee {
+  color: var(--icon-coffee);
+} /* nâu */
+.interest-item.icon-code {
+  color: var(--icon-code);
+} /* ngọc */
+.interest-item.icon-plane {
+  color: var(--icon-plane);
+} /* xanh dương */
+.interest-item.icon-futbol {
+  color: var(--icon-futbol);
+} /* xanh lá tươi */
+.interest-item.icon-headphones {
+  color: var(--icon-headphones);
+} /* tím đậm */
+.interest-item.icon-utensils {
+  color: var(--icon-utensils);
+} /* vàng cam */
+
+/* ------------------------- Right Column ---------------------- */
+.col-right {
+  /* flex-grow: 1; Tự động chiếm hết toàn bộ không gian còn lại của
+  main-content */
+  flex-grow: 1;
+  position: relative;
+  padding-left: 30px;
+
+  /* test */
+  border: 2px solid blue;
+  height: 500px;
+}
