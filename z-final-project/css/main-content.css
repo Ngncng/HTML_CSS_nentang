@@ -404,3 +404,75 @@
 .ability-icon.icon-cicd { color: var(--icon-cicd); }
 .ability-icon.icon-cache-queue { color: var(--icon-cache-queue); }
 .ability-icon.icon-refactor { color: var(--icon-refactor); }
+
+
+/* --------------------------------------------------------------Experience Section--------------------------------------------- */
+.experience-grid {
+  background-color: var(--bg-white-soft);
+  padding: 20px;
+  margin: 10px 00 15px;
+  border-radius: var(--border-radius-sm);
+  display: grid;
+  grid-template-columns:  repeat(3, 1fr);
+  gap: 20px;
+  box-shadow: var(--shadow-box);
+}
+
+.experience-item {
+  margin-bottom: 5px;
+  padding: 12px;
+  border-radius: var(--border-radius-sm);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.experience-company {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.experience-company a { font-weight: bold;}
+
+.experience-title {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.experience-location, 
+.experience-date{
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.experience-project {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--icon-cicd);
+}
+
+/* --------------------------------------------The End Box-----------------------------*/
+.the-end-box {
+  background-color: var(--bg-white-soft);
+  padding: 20px;
+  margin: 10px 0 0 15px;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-box);
+}
+
+/* nth-child(): Hiểu đơn giản là "đứa con thứ n" */
+/* .the-end-content p:nth-child(1) {} */
+.the-end-content p:first-child {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+/* đứa con thứ 2 của "the-end-content p" */
+.the-end-content p:nth-child(2) {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--color-orange);
+  font-weight: 600;
+  padding-left: 10px;
+  border-left: 3px solid var(--color-orange);
+}
+/* .the-end-content p:last-child {} */
