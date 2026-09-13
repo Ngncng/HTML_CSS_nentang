@@ -313,3 +313,94 @@
 /*  */
 .tag-orange { background-color: orange ;}
 .tag-orange::before {border-color: transparent var(--color-orange) transparent transparent;}
+
+
+/* ------------------------------------------------- Skills Grid ----------------------------------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px 10px;
+  text-align: center;
+}
+
+/* --Skill item-- */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* --skill icon-- */
+.skill-icon {
+  /* font-size cho các icon lấy từ thư viện */
+  font-size: 40px;
+  /* thêm width height cho các icon dùng riêng svg */
+  width: 40px;
+  height: 40px;
+  /* khoảng cách icon với chữ */
+  margin-bottom: 8px;
+}
+
+/* Hiệu ứng phóng to nhẹ khi rê chuột khi hover vào phần tử */
+.skill-item {
+  transition: var(--transition-scale);
+}
+
+.skill-item:hover {
+  transform: scale(1.2);
+}
+
+/* -----------------------------------------------------Abilities Grid----------------------------------- */
+
+.abilities-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px 10px;
+  text-align: center;
+}
+
+.ability-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600; 
+}
+
+/* Hiệu ứng phóng to nhẹ khi rê chuột vào phần tử*/
+.ability-item {
+  transition: var(--transition-scale);
+}
+
+.ability-item:hover {
+  transform: scale(1.2);
+}
+
+/* --Abilities icon-- */
+.ability-icon {
+  font-size: 34px;
+  margin-bottom: 8px;
+    /* thêm width height cho các icon dùng riêng svg */
+  /* width: 34px; */
+  /* height: 34px; */ 
+}
+
+/* -- Màu sắc cho Abilities icon vì font awesome mặc định không có set sẵn màu sắc như devicon nên phải set riêng --*/
+
+.ability-icon.icon-frontend { color: var(--icon-frontend); }
+.ability-icon.icon-backend { color: var(--icon-backend); }
+.ability-icon.icon-database { color: var(--icon-database); }
+.ability-icon.icon-devops { color: var(--icon-devops); }
+.ability-icon.icon-architecture { color: var(--icon-architecture); }
+.ability-icon.icon-testing { color: var(--icon-testing); }
+.ability-icon.icon-security { color: var(--icon-security); }
+.ability-icon.icon-performance { color: var(--icon-performance); }
+.ability-icon.icon-api { color: var(--icon-api); }
+.ability-icon.icon-git { color: var(--icon-git); }
+.ability-icon.icon-responsive { color: var(--icon-responsive); }
+.ability-icon.icon-agile { color: var(--icon-agile); }
+.ability-icon.icon-cicd { color: var(--icon-cicd); }
+.ability-icon.icon-cache-queue { color: var(--icon-cache-queue); }
+.ability-icon.icon-refactor { color: var(--icon-refactor); }
