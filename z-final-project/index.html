@@ -1,16 +1,13 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Creative Resume</title>
-    <link
-      rel="shortcut icon"
-      href="./assets/ico/icon-2.jpg"
-      type="image/x-icon"
-    />
 
-    <!-- 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Resume</title>
+  <link rel="shortcut icon" href="./assets/ico/icon-2.jpg" type="image/x-icon" />
+
+  <!-- 
     * rel="stylesheet": cho trình duyệt biết đây la một file thiết kế giao diện css
     
     * intergrity: một mã khóa bảo mật. Trình duyệt dựa vào mã này để kiểm tra xem file tải từ CDN về 
@@ -23,211 +20,238 @@
     trang web nào trong lúc tải file dữ liệu về. 
     -->
 
-    <!-- Sử dụng 2 bộ icon phổ biến là font-awesome và devicon  -->
-    <!-- font-awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <!-- Sử dụng 2 bộ icon phổ biến là font-awesome và devicon  -->
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- devicon -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.17.0/devicon.min.css"
-      integrity="sha512-6/05LVs+grXBAu5XzdiMFB64yCVF9FL70zWrTKcaTEKygrO7fC5LqfL/SKPpuRpimL2aE0D7Hw/NoED+7+7/VQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <!-- devicon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.17.0/devicon.min.css"
+    integrity="sha512-6/05LVs+grXBAu5XzdiMFB64yCVF9FL70zWrTKcaTEKygrO7fC5LqfL/SKPpuRpimL2aE0D7Hw/NoED+7+7/VQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- gg-font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
+  <!-- gg-font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet" />
 
-    <!-- file css chính của chúng ta: index.css -->
-    <link rel="stylesheet" href="./css/index.css" />
-  </head>
-  <body>
-    <div class="resume-container">
+  <!-- file css chính của chúng ta: index.css -->
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
 
-      <!-- Header -->
-      <header class="header">
-         <!-- bubble-left -->
-        <div class="bubble-left">
-          <div class="hello-text">Hello there,</div>
-          <div class="contact-info">
-            <!-- SĐT -->
-            <p>
-              <i class="fas fa-mobile-alt"></i>
-              <a href="tel:0123456789">
-                0123456789
-              </a>
-            </p>
+<body>
+  <div class="resume-container">
+
+    <!-- Header -->
+    <header class="header">
+      <!-- bubble-left -->
+      <div class="bubble-left">
+        <div class="hello-text">Hello there,</div>
+        <div class="contact-info">
+          <!-- SĐT -->
+          <p>
+            <i class="fas fa-mobile-alt"></i>
+            <a href="tel:0123456789">
+              0123456789
+            </a>
+          </p>
 
           <!--
             rel="noopener noreferrer": với exterrnal link target _blank, thì rel này sẽ 
             ngăn chặn lỗ hỏng bảo mật liên quan đến tab lừa đảo (window.opener)
             đồng thời ẩn thông tin nguồn (Referrer) để bảo mật cho trang web của mình
           -->
-            <p>
-              <i class="fas fa-map-marker-alt"></i>
-              <a href="https://maps.app.goo.gl/i364DGSWY8as1Mba6" target="_blank" rel="noopener noreferrer">
-                Hanoi, Vietnam
-              </a>
-            </p>
+          <p>
+            <i class="fas fa-map-marker-alt"></i>
+            <a href="https://maps.app.goo.gl/i364DGSWY8as1Mba6" target="_blank" rel="noopener noreferrer">
+              Hanoi, Vietnam
+            </a>
+          </p>
 
-            <!-- Github -->
-            <p>
-              <i class="fas fa-globe"></i>
-              <a href="https://github.com/Ngncng/" target="_blank" rel="noopener noreferrer">
-                Github
-              </a>
-            </p>
+          <!-- Github -->
+          <p>
+            <i class="fas fa-globe"></i>
+            <a href="https://github.com/Ngncng/" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </p>
 
-            <!-- Mail -->
-            <p>
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:obito060523@gmail.com" target="_blank" rel="noopener noreferrer">obito060523@gmail.com</a>
-            </p>
-          </div>
+          <!-- Mail -->
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:obito060523@gmail.com" target="_blank" rel="noopener noreferrer">obito060523@gmail.com</a>
+          </p>
         </div>
+      </div>
 
-        <!-- Avatar -->
-         <div class="avatar">
-            <img src="./assets/img/icon-2.jpg" alt="Hoclaptrinh">
-         </div>
+      <!-- Avatar -->
+      <div class="avatar">
+        <img src="./assets/img/icon-2.jpg" alt="Hoclaptrinh">
+      </div>
 
-         <!-- bubble-right -->
-          <div class="bubble-right">
-            <div class="im-text">i'm Hoclaptrinh</div>
-            <div class="first-job">Developer</div>
-            <div class="second-job">Student</div>
-            <div class="third-job">Upcoming...</div>
+      <!-- bubble-right -->
+      <div class="bubble-right">
+        <div class="im-text">i'm Hoclaptrinh</div>
+        <div class="first-job">Developer</div>
+        <div class="second-job">Student</div>
+        <div class="third-job">Upcoming...</div>
 
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- Left Column -->
+      <div class="col-left">
+        <!-- About Me -->
+        <section class="section-left">
+          <div class="ribbon-left bg-green">
+            <i class="fas fa-user"></i> About Me
           </div>
-      </header>
 
-      <main class="main-content">
-        <!-- Left Column -->
-        <div class="col-left">
-          <!-- About Me -->
-           <section class="section-left">
-            <div class="ribbon-left bg-green">
-              <i class="fas fa-user"></i> About Me
-            </div>
+          <!-- Paper Box -->
+          <div class="paper-box">
+            <p>
+              Recent graduate in Information Technology. <br>
+              My programming skills and real-world experience are still limited, and I have not yet worked on projects
+              in a
+              professional company environment.
+              <b>I am genuinely looking for a Fresher/Intern position</b> where I can receive regular guidance and
+              feedback from
+              experienced colleagues, so I can learn, improve, and gradually contribute to real work.
+              <b>I am ready to start from the most basic tasks, stay proactive, and work hard to grow.</b>
+            </p>
+          </div>
+        </section>
 
-            <!-- Paper Box -->
-             <div class="paper-box">
-              <p>
-                Recent graduate in Information Technology. <br>
-                My programming skills and real-world experience are still limited, and I have not yet worked on projects in a
-                professional company environment.
-                <b>I am genuinely looking for a Fresher/Intern position</b> where I can receive regular guidance and feedback from
-                experienced colleagues, so I can learn, improve, and gradually contribute to real work.
-                <b>I am ready to start from the most basic tasks, stay proactive, and work hard to grow.</b>
-              </p>
-             </div>
-           </section>
+        <!-- Personal Info -->
+        <section class="section-left">
+          <div class="ribbon-left bg-dark-teal">
+            <i class="fas fa-id-card"></i> Personal Info
+          </div>
 
-          <!-- Personal Info -->
-          <section class="section-left">
-            <div class="ribbon-left bg-dark-teal">
-              <i class="fas fa-id-card"></i> Personal Info
-            </div>
-
-            <!-- Paper Box -->
-            <div class="paper-box">
-              <ul>
-                <li>
-                  <strong>Name:</strong>
-                  <span class="username">Nguyen Le Cong</span>
-                </li>
-                <!--  -->
-                <li>
-                  <strong>Age:</strong>
-                  <span class="age">23</span>
-                </li>
-                <!--  -->
-                <li>
-                  <strong>Gender:</strong>
-                  <span class="gender">Male</span>
-                </li>
-                <!--  -->
-                <li>
-                  <strong>Github:</strong>
-                  <a href="https://github.com/Ngncng?tab=repositories" class="colorful-link" target="_blank" rel="noopener noreferrer">Github</a>
-                </li>
-                <!--  -->
-                <li>
-                  <strong>Email:</strong>
-                  <a href="mailto:obito060523@gmail.com" class="colorful-link" target="_blank"
-                    rel="noopener noreferrer">obito060523@gmail.com</a>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- Education -->
-          <section class="section-left">
-            <div class="ribbon-left bg-orange">
-              <i class="fas fa-graduation-cap"></i> Education
-            </div>
-
-            <div class="education-box">
-              <div class="education-title">
-                 <span class="education-icon">
-                  <i class="fas fa-star-half-alt"></i>
-                 </span>
-                <a href="https://nctu.edu.vn/" class="colorful-link" target="_blank"
-                  rel="noopener noreferrer">Nam Can Tho University</a>
-              </div>
+          <!-- Paper Box -->
+          <div class="paper-box">
+            <ul>
+              <li>
+                <strong>Name:</strong>
+                <span class="username">Nguyen Le Cong</span>
+              </li>
               <!--  -->
-              <div class="education-content">
-                <p>I graduated with a degree in <strong>Information Technology</strong> from Nam Can Tho University (2022–2026).</p>
-                <p>During my studies, I completed two major course projects: <br> - an e-commerce PetShop website using C# / ASP.NET Core MVC
-                <br>- a RAG chatbot system using FastAPI, LangChain, and ChromaDB.</p>
-              </div>
-            </div>
-          </section>
+              <li>
+                <strong>Age:</strong>
+                <span class="age">23</span>
+              </li>
+              <!--  -->
+              <li>
+                <strong>Gender:</strong>
+                <span class="gender">Male</span>
+              </li>
+              <!--  -->
+              <li>
+                <strong>Github:</strong>
+                <a href="https://github.com/Ngncng?tab=repositories" class="colorful-link" target="_blank"
+                  rel="noopener noreferrer">Github</a>
+              </li>
+              <!--  -->
+              <li>
+                <strong>Email:</strong>
+                <a href="mailto:obito060523@gmail.com" class="colorful-link" target="_blank"
+                  rel="noopener noreferrer">obito060523@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+        </section>
 
-          <!-- Interests -->
-          <section class="section-left">
-            <div class="ribbon-left bg-red">
-              <i class="fas fa-thumbs-up"></i> Interests
+        <!-- Education -->
+        <section class="section-left">
+          <div class="ribbon-left bg-orange">
+            <i class="fas fa-graduation-cap"></i> Education
+          </div>
+
+          <div class="education-box">
+            <div class="education-title">
+              <span class="education-icon">
+                <i class="fas fa-star-half-alt"></i>
+              </span>
+              <a href="https://nctu.edu.vn/" class="colorful-link" target="_blank" rel="noopener noreferrer">Nam Can Tho
+                University</a>
             </div>
             <!--  -->
-            <div class="interests-grid">
-              <div class="interest-item icon-gamepad" title="Gaming"><i class="fas fa-gamepad"></i></div>
-              <div class="interest-item icon-tv" title="Watching TV/Movies"><i class="fas fa-tv"></i></div>
-              <div class="interest-item icon-globe-americas" title="Traveling"><i class="fas fa-globe-americas"></i></div>
-              <div class="interest-item icon-palette" title="Art &amp; Design"><i class="fas fa-palette"></i></div>
-              <div class="interest-item icon-music" title="Music"><i class="fas fa-music"></i></div>
-              <div class="interest-item icon-book" title="Reading"><i class="fas fa-book"></i></div>
-              <div class="interest-item icon-camera" title="Photography"><i class="fas fa-camera"></i></div>
-              <div class="interest-item icon-dumbbell" title="Fitness"><i class="fas fa-dumbbell"></i></div>
-              <div class="interest-item icon-coffee" title="Coffee"><i class="fas fa-coffee"></i></div>
-              <div class="interest-item icon-code" title="Coding"><i class="fas fa-code"></i></div>
-              <div class="interest-item icon-plane" title="Traveling by Air"><i class="fas fa-plane"></i></div>
-              <div class="interest-item icon-futbol" title="Football"><i class="fas fa-futbol"></i></div>
-              <div class="interest-item icon-headphones" title="Podcasts"><i class="fas fa-headphones"></i></div>
-              <div class="interest-item icon-utensils" title="Cooking &amp; Food"><i class="fas fa-utensils"></i></div>
-              <div class="interest-item icon-youtube" title="YouTube"><i class="fab fa-youtube"></i></div>
+            <div class="education-content">
+              <p>I graduated with a degree in <strong>Information Technology</strong> from Nam Can Tho University
+                (2022–2026).</p>
+              <p>During my studies, I completed two major course projects: <br> - an e-commerce PetShop website using C#
+                / ASP.NET Core MVC
+                <br>- a RAG chatbot system using FastAPI, LangChain, and ChromaDB.
+              </p>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
+
+        <!-- Interests -->
+        <section class="section-left">
+          <div class="ribbon-left bg-red">
+            <i class="fas fa-thumbs-up"></i> Interests
+          </div>
+          <!--  -->
+          <div class="interests-grid">
+            <div class="interest-item icon-gamepad" title="Gaming"><i class="fas fa-gamepad"></i></div>
+            <div class="interest-item icon-tv" title="Watching TV/Movies"><i class="fas fa-tv"></i></div>
+            <div class="interest-item icon-globe-americas" title="Traveling"><i class="fas fa-globe-americas"></i></div>
+            <div class="interest-item icon-palette" title="Art &amp; Design"><i class="fas fa-palette"></i></div>
+            <div class="interest-item icon-music" title="Music"><i class="fas fa-music"></i></div>
+            <div class="interest-item icon-book" title="Reading"><i class="fas fa-book"></i></div>
+            <div class="interest-item icon-camera" title="Photography"><i class="fas fa-camera"></i></div>
+            <div class="interest-item icon-dumbbell" title="Fitness"><i class="fas fa-dumbbell"></i></div>
+            <div class="interest-item icon-coffee" title="Coffee"><i class="fas fa-coffee"></i></div>
+            <div class="interest-item icon-code" title="Coding"><i class="fas fa-code"></i></div>
+            <div class="interest-item icon-plane" title="Traveling by Air"><i class="fas fa-plane"></i></div>
+            <div class="interest-item icon-futbol" title="Football"><i class="fas fa-futbol"></i></div>
+            <div class="interest-item icon-headphones" title="Podcasts"><i class="fas fa-headphones"></i></div>
+            <div class="interest-item icon-utensils" title="Cooking &amp; Food"><i class="fas fa-utensils"></i></div>
+            <div class="interest-item icon-youtube" title="YouTube"><i class="fab fa-youtube"></i></div>
+          </div>
+        </section>
+      </div>
 
 
-        <!-- Right Column -->
-        <div class="col-right"></div>
-      </main>
+      <!-- Right Column -->
+      <div class="col-right">
+        <!-- Skills -->
+        <section class="section-right dot-red">
+          <div class="tag-title tag-red">
+            <i class="fas fa-magic"></i> Skills
+          </div>
+        </section>
 
-      <!-- <footer class="footer"></footer> -->
-    </div>
-  </body>
+        <!-- Abilities -->
+        <section class="section-right dot-green">
+          <div class="tag-title tag-green">
+            <i class="fas fa-code"></i> Abilities
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="section-right dot-teal">
+          <div class="tag-title tag-teal">
+            <i class="fas fa-bolt"></i> Experience
+          </div>
+        </section>
+
+        <!-- The end -->
+        <section class="section-right dot-orange">
+          <div class="tag-title tag-orange">
+            <i class="fas fa-angles-right"></i> The End
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- <footer class="footer"></footer> -->
+  </div>
+</body>
+
 </html>

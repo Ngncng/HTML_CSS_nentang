@@ -6,9 +6,9 @@
 
 /* ---------------------- Left Column --------------------- */
 .col-left {
-  width: 400px;
+  width: 375px;
   /* kiến thức bổ sung: flex-shrink: Nếu muốn ép cột không bao giờ
-  được co nhỏ lại dưới chiều rộng của nó: vd với bài của chúng ta width là 400px */
+  được co nhỏ lại dưới chiều rộng của nó: vd với bài của chúng ta width là 375px */
   /* flex-shrink: 0; */
   display: flex;
   flex-direction: column;
@@ -232,9 +232,84 @@
   main-content */
   flex-grow: 1;
   position: relative;
+  /* tạo khoảng cách với phần timeline */
   padding-left: 30px;
 
   /* test */
-  border: 2px solid blue;
-  height: 500px;
+  /* border: 2px solid blue;
+  height: 500px; */
 }
+
+
+/* -----------------------------Timeline Line------------------------- */
+.col-right::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 14px;
+  bottom: 0;
+  width: 0;
+  border-left: 4px dotted var(--color-white);
+}
+
+.section-right {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* ---------------------------------Timeline Dot--------------------------- */
+.section-right::before {
+  content: "";
+  /* vì phần tử cha là relative */
+  position: absolute;
+  left: -35px;
+  top: 14px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  /* tăng thứ hạng ưu tiên hiển thị */
+  z-index: 2;
+}
+
+/* Dot Colors */
+.dot-red::before { background-color: var(--color-red);}
+.dot-green::before { background-color: var(--color-green);}
+.dot-teal::before { background-color: var(--color-teal);}
+.dot-orange::before { background-color: var(--color-orange);}
+
+/* -------------------------------Tag Title--------------------------------- */
+.tag-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  color:  var(--color-white);
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: var(--border-radius-sm);
+  position: relative;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.tag-title::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform:  translateY(-50%);
+  border-width: 12px 12px 12px 0;
+  border-style: solid;
+}
+
+.tag-red { background-color: var(--color-red)}
+.tag-red::before { border-color: transparent var(--color-red) transparent transparent; }
+/*  */
+.tag-green { background-color: var(--color-green);}
+.tag-green::before { border-color: transparent var(--color-green) transparent transparent; }
+/*  */
+.tag-teal { background-color: var(--color-teal);}
+.tag-teal::before {border-color: transparent var(--color-teal) transparent transparent; }
+/*  */
+.tag-orange { background-color: orange ;}
+.tag-orange::before {border-color: transparent var(--color-orange) transparent transparent;}
